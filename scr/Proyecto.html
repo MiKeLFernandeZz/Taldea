@@ -1,0 +1,84 @@
+<html>
+
+    <head>
+
+        <title>Logela</title>
+        <link rel="stylesheet" href="mystyles.css">
+
+    </head>
+
+    <body>
+        <div>
+            <header>
+                <img id="Logoa" src="img/MondragonLogo.png">
+            </header>
+
+            <div id="Izenburua">
+                <p1 id="Titulo">Felipe's Bizarre Adventure</p1>
+            </div>
+
+            <center>
+                <img id="habitacion" src="img/Habitacion-oscura.jpg" width="720" height="480" alt="uwu" usemap="#habitacion">
+            </center>
+
+            <map name="habitacion">
+                <area shape="circle" coords="370,38,24" alt="bombilla" onclick="bombilla()">
+                <area shape="circle" coords="464,30,24" alt="bombilla" onclick="bombilla()">
+                <area shape="circle" coords="417,85,36" alt="bombilla" onclick="bombilla()">
+                <area shape="rect" coords="379,233,402,265" alt="bombilla" onclick="reloj()">
+                <area shape="rect" coords="484,234,573,405" alt="bombilla" onclick="Felipe()">
+            </map>
+
+            <script>
+                var x = 0;
+                var y = 0;
+
+                function bombilla(){
+                    if (x < 1){
+                        document.getElementById("habitacion").src="img/Habitacion-iluminada.jpg";
+                        x = 1;
+                    } else {
+                        document.getElementById("habitacion").src="img/Habitacion-oscura.jpg";
+                        x = 0;
+                        y = 0;
+                    }
+                }
+
+                function reloj(){
+                    if (x > 0){
+                        document.getElementById("habitacion").src="img/Felipe-sentado-de-pana.jpg"
+                        y = 1
+                    }
+                }
+
+                function Felipe(){
+                    if (y > 0){
+                        document.getElementById("habitacion").src="img/GG.jpg";
+                        setTimeout(Aldaketa, 3000)
+                    }
+                }
+
+                function Aldaketa(){
+                    location.href='Semaforoa.html';
+                }
+
+            </script>
+
+        </div>
+
+        <div id="espacio"></div>
+
+        <footer id="footer">
+            <img id="Logoa2" src="img/MondragonLogoTxikia.png">
+            <div id="Info">
+                <p>© 2020 MONDRAGON UNIBERTSITATEA</p>
+                <p>Loramendi, 4. Apartado 23 - 20500 Arrasate - Mondragón</p>
+                <p>Tel.: +34 943 712 185 - Fax: +34 943 000 500</p>
+            </div>
+        </footer>
+
+    </body>
+
+    
+    
+</html>
